@@ -26,6 +26,7 @@
         padding: 32px 16px;
       }
       header h1 {
+        color: #0f172a;
         font-size: 30px;
         font-weight: 800;
         margin: 0 0 4px 0;
@@ -139,12 +140,21 @@
         color: #334155;
         cursor: pointer;
       }
+      .results-header h2 {
+        margin-bottom: 4px;
+      }
       .results-header-row {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 24px;
+        margin-bottom: 5px;
       }
+      .data-note {
+        margin: 4px 0 20px;
+        font-size: 12px;
+        color: #64748b;
+      }
+
       .results-title {
         font-size: 20px;
         font-weight: 700;
@@ -297,127 +307,209 @@
       }
 
       /* Clean info button design styling rules */
-    .info-btn-trigger {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 16px;
-      height: 16px;
-      margin-left: 6px;
-      background-color: #e2e8f0;
-      color: #64748b;
-      border-radius: 50%;
-      font-size: 11px;
-      font-weight: 700;
-      cursor: pointer;
-      vertical-align: middle;
-      position: relative;
-      top: -1px;
-      border: none;
-      outline: none;
-      transition: all 0.2s ease;
-    }
-    .info-btn-trigger:hover {
-      background-color: #cbd5e1;
-      color: #334155;
-    }
+      .info-btn-trigger {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 16px;
+        margin-left: 6px;
+        background-color: #e2e8f0;
+        color: #64748b;
+        border-radius: 50%;
+        font-size: 11px;
+        font-weight: 700;
+        cursor: pointer;
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+        border: none;
+        outline: none;
+        transition: all 0.2s ease;
+      }
+      .info-btn-trigger:hover {
+        background-color: #cbd5e1;
+        color: #334155;
+      }
 
-    /* Side Drawer Popup Component UI Sheets */
-    .drawer-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(15, 23, 42, 0.4);
-      backdrop-filter: blur(2px);
-      z-index: 100;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .drawer-pane {
-      position: fixed;
-      top: 0;
-      right: -360px; /* Fully tucked away offscreen layout margins */
-      width: 100%;
-      max-width: 360px;
-      height: 100vh;
-      background-color: #ffffff;
-      box-shadow: -4px 0 24px -4px rgba(0, 0, 0, 0.1);
-      z-index: 101;
-      box-sizing: border-box;
-      padding: 32px 24px;
-      display: flex;
-      flex-direction: column;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+      /* Side Drawer Popup Component UI Sheets */
+      .drawer-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(15, 23, 42, 0.4);
+        backdrop-filter: blur(2px);
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .drawer-pane {
+        position: fixed;
+        top: 0;
+        right: -360px; /* Fully tucked away offscreen layout margins */
+        width: 100%;
+        max-width: 360px;
+        height: 100vh;
+        background-color: #ffffff;
+        box-shadow: -4px 0 24px -4px rgba(0, 0, 0, 0.1);
+        z-index: 101;
+        box-sizing: border-box;
+        padding: 32px 24px;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
 
-    /* Open States handling triggers */
-    .drawer-open .drawer-overlay {
-      opacity: 1;
-      visibility: visible;
-    }
-    .drawer-open .drawer-pane {
-      right: 0; /* Smooth slides right into view */
-    }
+      /* Open States handling triggers */
+      .drawer-open .drawer-overlay {
+        opacity: 1;
+        visibility: visible;
+      }
+      .drawer-open .drawer-pane {
+        right: 0; /* Smooth slides right into view */
+      }
 
-    .drawer-close-btn {
-      align-self: flex-end;
-      background: none;
-      border: none;
-      font-size: 24px;
-      font-weight: 600;
-      color: #94a3b8;
-      cursor: pointer;
-      padding: 0;
-      line-height: 1;
-      margin-bottom: 16px;
-    }
-    .drawer-close-btn:hover { color: #475569; }
-    .drawer-pane h3 {
-      font-size: 20px;
-      font-weight: 800;
-      margin: 0 0 20px 0;
-      color: #0f172a;
-    }
-    .drawer-content h4 {
-      font-size: 14px;
-      font-weight: 700;
-      margin: 20px 0 6px 0;
-      color: #1e293b;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .drawer-content p {
-      font-size: 14px;
-      color: #475569;
-      line-height: 1.6;
-      margin: 0 0 16px 0;
-    }
-    
-    .data-note {
+      .drawer-close-btn {
+        align-self: flex-end;
+        background: none;
+        border: none;
+        font-size: 24px;
+        font-weight: 600;
+        color: #94a3b8;
+        cursor: pointer;
+        padding: 0;
+        line-height: 1;
+        margin-bottom: 16px;
+      }
+      .drawer-close-btn:hover {
+        color: #475569;
+      }
+      .drawer-pane h3 {
+        font-size: 20px;
 
-  margin: 4px 0 20px;
+        font-weight: 800;
 
-  font-size: 12px;
+        margin: 0 0 20px 0;
+        color: #0f172a;
+      }
+      .drawer-content h4 {
+        font-size: 14px;
+        font-weight: 700;
+        margin: 20px 0 6px 0;
+        color: #1e293b;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .drawer-content p {
+        font-size: 14px;
+        color: #475569;
+        line-height: 1.6;
+        margin: 0 0 16px 0;
+      }
 
-  color: #64748b;
+      .calculator-info {
+        margin: 20px 0;
 
-}
+        padding: 16px 20px;
+
+        background: #edf2f8;
+
+        border: 1px solid #d5deeb;
+
+        border-radius: 12px;
+      }
+
+      .calculator-info summary {
+        cursor: pointer;
+
+        font-weight: 600;
+
+        color: #334155;
+      }
+
+      .calculator-info summary:hover {
+        color: #2563eb;
+      }
+
+      .calculator-info-content {
+        margin-top: 16px;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        color: #475569;
+      }
+
+      .calculator-info-content ul {
+        padding-left: 20px;
+
+        margin: 12px 0;
+      }
+
+      .calculator-info-content li {
+        margin-bottom: 8px;
+      }
+
+      .calculator-disclaimer {
+        margin-top: 16px;
+
+        font-size: 12px;
+
+        color: #64748b;
+      }
     </style>
-
-
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <h1>Got a job offer to move to Singapore?</h1>
+        <h1>Got a job offer to move to Singapore? 🇸🇬</h1>
         <p>
           Where should you live on your Singapore salary? Compare rent, commute
           and what you have left each month.
         </p>
       </header>
+
+      <details class="calculator-info">
+        <summary>How does this calculator work?</summary>
+
+        <div class="calculator-info-content">
+          <p>
+            Considering a job offer in Singapore? WorthTheMove helps you explore
+            where you could afford to live and how much of your salary you might
+            have left each month.
+          </p>
+
+          <ul>
+            <li>
+              <strong>Rent:</strong> Based on median private condo rental
+              transactions.
+            </li>
+            <li>
+              <strong>Income tax:</strong> Estimated using Singapore's
+              progressive resident income tax rates.
+            </li>
+            <li>
+              <strong>Commute:</strong> Estimated travel times to your selected
+              office location.
+            </li>
+            <li>
+              <strong>Money left over:</strong> Monthly salary minus estimated
+              income tax, rent, and a fixed transport allowance.
+            </li>
+          </ul>
+
+          <p class="calculator-disclaimer">
+            Figures are estimates for general comparison. Rental prices and
+            commute times vary by property and journey. Tax calculations assume
+            Singapore tax residency and exclude individual reliefs. This tool
+            does not constitute personalised financial advice.
+          </p>
+        </div>
+      </details>
 
       <div class="main-grid">
         <!-- Left Column: User Controls panel -->
@@ -475,9 +567,7 @@
               <option value="buona_vista">Buona Vista (EW21 / CC22)</option>
               <option value="city_hall">City Hall (EW13 / NS25)</option>
               <option value="downtown">Downtown (DT16)</option>
-              <option value="expo">
-                Expo / Changi Biz Park (DT35)
-              </option>
+              <option value="expo">Expo / Changi Biz Park (DT35)</option>
               <option value="harbourfront">HarbourFront (NE1 / CC29)</option>
               <option value="jurong_east">Jurong East (EW24 / NS1)</option>
               <option value="one_north">one-north (CC23)</option>
@@ -492,11 +582,11 @@
         <!-- Right Column: Cards Leaderboard panel -->
         <div>
           <div class="results-header-row">
-
             <div class="results-header">
               <h2>Neighborhood Financial Analysis</h2>
               <p class="data-note">
-                Rent estimates are based on median private condo rents from Q2 2026 rental transactions.
+                Rent estimates are based on median private condo rents from Q2
+                2026 rental transactions.
               </p>
             </div>
 
@@ -553,45 +643,35 @@
     <script src="data.js"></script>
     <script src="app.js"></script>
 
-
     <div class="drawer-overlay" onclick="closeHousingDrawer()"></div>
 
-  <aside class="drawer-pane">
+    <aside class="drawer-pane">
+      <button
+        type="button"
+        class="drawer-close-btn"
+        onclick="closeHousingDrawer()"
+        aria-label="Close"
+      >
+        &times;
+      </button>
 
-    <button
+      <h3>Housing Types</h3>
+      <div class="drawer-content">
+        <h4>Private Condo</h4>
+        <p>
+          Private residential developments, often with facilities such as pools,
+          gyms and security.
+        </p>
 
-      type="button"
-
-      class="drawer-close-btn"
-
-      onclick="closeHousingDrawer()"
-
-      aria-label="Close"
-
-    >
-
-      &times;
-
-    </button>
-
-    <h3>Housing Types</h3>
-    <div class="drawer-content">
-      <h4>Private Condo</h4>
-      <p>
-        Private residential developments, often with facilities such as pools, gyms and security.
-      </p>
-
-      <h4>HDB Flat</h4>
-      <p>
-        Public housing apartments. Typically lower rents, but without the private facilities commonly found in condos.
-      </p>
-    </div>
-
-  </aside>
+        <h4>HDB Flat</h4>
+        <p>
+          Public housing apartments. Typically lower rents, but without the
+          private facilities commonly found in condos.
+        </p>
+      </div>
+    </aside>
   </body>
 </html>
-
-
 
 <footer
   style="

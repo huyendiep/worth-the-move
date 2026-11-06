@@ -1,0 +1,32 @@
+{
+  "name": "worth-the-move",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+  "test": "node --test app.test.js",
+  "prepare": "husky"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huyendiep/worth-the-move.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/huyendiep/worth-the-move/issues"
+  },
+  "homepage": "https://github.com/huyendiep/worth-the-move#readme",
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
+    "prettier": "^3.9.10"
+  },
+  "lint-staged": {
+
+  "*.{html,css,js}": "prettier --write"
+
+}
+}
